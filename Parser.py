@@ -3,8 +3,8 @@ import vk_api
 import datetime
 from psycopg2 import Error
 
-#токен для доступа к апи вк
-key ='05d78f8505d78f8505d78f85aa06c132cc005d705d78f85605d5311d02ab5f2e64cd9ee'
+#токен для доступа к апи вк505d
+key = 0
 
 #название группы откуда будем брать новости
 domain = 'overhear_tpu'
@@ -13,7 +13,7 @@ domain = 'overhear_tpu'
 #параметры для подключения к удаленной бд
 user = "zexccsqi"
 host = "tiny.db.elephantsql.com"
-password = "87Ts-zNNXQ67YiJoEzQB7-aS2IahauWL"
+password =0
 database = "tiny.db.elephantsql.com"
 
 #словарь для сверки уже с уже спарсенными сообщениями
@@ -78,7 +78,7 @@ try:
                     cursor.execute(postgresql_select_query, (hash, post, owner_id, countComments, str(datetime_obj)))
                     connection.commit()
 
-                    #если колличество комментариев привышает 0
+                    #если колличество комментариев превышает 0
                     if(countComments > 0):
                         #то объявляем счётчик
                         comCount = 0
